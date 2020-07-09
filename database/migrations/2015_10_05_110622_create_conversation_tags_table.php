@@ -13,11 +13,10 @@ class CreateConversationTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('conversations', function (Blueprint $table) {
+        Schema::create('conversation_tag', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_one');
-            $table->integer('user_two');
-            $table->boolean('status');
+            $table->integer('conversation_id');
+            $table->integer('tag_id');
             $table->timestamps();
         });
     }
